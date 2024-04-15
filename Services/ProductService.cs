@@ -1,16 +1,16 @@
 ﻿using BaseWeb.API.Entities.Entity;
-using BaseWeb.API.Entities.Interfaces;
+using BaseWeb.API.Services.Interfaces;
 
 namespace BaseWeb.API.Services
 {
-    public class ProductService
+    public class ProductService : IProductService
     {
         public ProductService()
         {
                 
         }
 
-        public static List<Product> GetAllProduct()
+        public List<Product> GetAllProduct()
         {
             return null;
         }
