@@ -1,6 +1,5 @@
-﻿using BaseWeb.API.Entities.Entity;
-using BaseWeb.API.Services;
-using BaseWeb.API.Services.Interfaces;
+﻿using BaseWeb.API.Services.Implementations;
+using BaseWeb.Core.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BaseWeb.API.Controllers
@@ -14,8 +13,8 @@ namespace BaseWeb.API.Controllers
             
         }
 
-        [HttpGet]
-        public List<Product> ProductsGetAll()
+        [HttpGet("ProductsGetAll")]
+        public List<ProductDto> ProductsGetAll()
         {
             var prodServ = new ProductService();
             var result = prodServ.GetAllProduct();
